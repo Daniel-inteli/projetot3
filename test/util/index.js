@@ -17,11 +17,17 @@ const USER = {
   password: "password123",
 };
 
+
 const FILE = (fieldName) => {
   return {
-    upload: (options, callback) => {
+    upload: (options,callback) => {
       // Simular o upload do arquivo
-      callback(null, [{ fd: "caminho/do/arquivo" }]);
+      
+      callback(null, [
+        {
+          fd: fieldName,
+        },
+      ]);
     },
   };
 };
